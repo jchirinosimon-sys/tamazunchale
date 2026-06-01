@@ -1729,6 +1729,7 @@ function makeDraggable(el) {
   var startX, startY, origX, origY;
 
   function onStart(e) {
+    if (e.target.closest("button, input, [data-action]")) return;
     e.preventDefault();
     var rect = el.getBoundingClientRect();
     origX = rect.left;
