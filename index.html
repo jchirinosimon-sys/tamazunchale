@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La Rebelión de Tamazunchale | Museo digital</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%237f312c'/><path d='M18 28 L32 14 L46 28 L42 28 L42 50 L22 50 L22 28 Z' fill='%23f1e6cf' stroke='%23241d18' stroke-width='1.5'/><rect x='28' y='36' width='8' height='14' fill='%23241d18'/><path d='M20 22 L32 12 L44 22' fill='none' stroke='%23a8612c' stroke-width='2.5' stroke-linecap='round'/><circle cx='32' cy='20' r='3' fill='%23d89548'/></svg>">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="welcome-screen" class="welcome-screen">
+      <div class="welcome-bg"></div>
+      <div class="welcome-content">
+        <h1 class="welcome-title">Bienvenido al Museo Digital de la Rebelión de Tamazunchale</h1>
+        <p class="welcome-subtitle">Museo Digital Interactivo</p>
+        <p class="welcome-text">Explora los acontecimientos, personajes y consecuencias de uno de los movimientos más importantes de la Huasteca Potosina.</p>
+        <div class="welcome-actions">
+          <button class="welcome-btn" autofocus>▶ Iniciar presentación</button>
+          <button class="welcome-btn-secondary">📖 Explorar libremente</button>
+        </div>
+        <div class="welcome-indicator" style="display:none">🔊 Reproduciendo presentación...</div>
+      </div>
+    </div>
+    <div class="parallax-container" aria-hidden="true">
+      <div class="parallax-layer pl-sky" data-speed="0.02"></div>
+      <div class="parallax-layer pl-mountains" data-speed="0.06" aria-hidden="true">
+        <svg viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 500 L80 340 L180 420 L320 220 L480 380 L620 180 L780 320 L940 140 L1100 280 L1280 200 L1450 350 L1600 260 L1600 500 Z" fill="rgba(89,107,67,0.15)"/>
+          <path d="M0 500 L120 380 L260 440 L420 260 L580 400 L740 240 L900 380 L1060 200 L1220 340 L1400 280 L1600 380 L1600 500 Z" fill="rgba(89,107,67,0.1)"/>
+          <path d="M0 500 L160 420 L300 470 L480 320 L640 450 L800 320 L960 430 L1140 280 L1320 380 L1520 320 L1600 360 L1600 500 Z" fill="rgba(86,106,115,0.08)"/>
+        </svg>
+      </div>
+      <div class="parallax-layer pl-vegetation" data-speed="0.12" aria-hidden="true">
+        <svg viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+          <path d="M80 400 L75 330 L60 320 Q75 325 80 340 Q85 325 100 320 L85 330 90 400" fill="rgba(89,107,67,0.12)"/>
+          <path d="M200 400 L195 340 L180 330 Q195 335 200 350 Q205 335 220 330 L205 340 210 400" fill="rgba(89,107,67,0.1)"/>
+          <path d="M450 400 L445 320 L430 310 Q445 315 450 330 Q455 315 470 310 L455 320 460 400" fill="rgba(89,107,67,0.12)"/>
+          <path d="M700 400 L695 350 L680 340 Q695 345 700 360 Q705 345 720 340 L705 350 710 400" fill="rgba(89,107,67,0.1)"/>
+          <path d="M950 400 L945 330 L930 320 Q945 325 950 340 Q955 325 970 320 L955 330 960 400" fill="rgba(89,107,67,0.12)"/>
+          <path d="M1200 400 L1195 350 L1180 340 Q1195 345 1200 360 Q1205 345 1220 340 L1205 350 1210 400" fill="rgba(89,107,67,0.1)"/>
+          <path d="M1400 400 L1395 320 L1380 310 Q1395 315 1400 330 Q1405 315 1420 310 L1405 320 1410 400" fill="rgba(89,107,67,0.12)"/>
+          <path d="M0 380 Q200 360 400 370 Q600 350 800 365 Q1000 345 1200 360 Q1400 340 1600 355 L1600 400 L0 400 Z" fill="rgba(89,107,67,0.08)"/>
+        </svg>
+      </div>
+      <div class="parallax-layer pl-culture" data-speed="0.18" aria-hidden="true">
+        <svg viewBox="0 0 1600 300" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+          <path d="M300 300 L300 260 L320 260 L320 300" fill="rgba(168,97,44,0.08)"/>
+          <path d="M800 300 L800 250 L825 250 L825 300" fill="rgba(168,97,44,0.08)"/>
+          <path d="M1200 300 L1200 265 L1220 265 L1220 300" fill="rgba(168,97,44,0.08)"/>
+          <path d="M0 290 Q400 270 800 280 Q1200 260 1600 275 L1600 300 L0 300 Z" fill="rgba(36,29,24,0.04)"/>
+          <circle cx="350" cy="270" r="4" fill="rgba(168,97,44,0.15)"/>
+          <circle cx="850" cy="260" r="4" fill="rgba(168,97,44,0.15)"/>
+          <circle cx="1250" cy="275" r="4" fill="rgba(168,97,44,0.15)"/>
+        </svg>
+      </div>
+      <div class="parallax-overlay po-introduccion"></div>
+      <div class="parallax-overlay po-antecedentes"></div>
+      <div class="parallax-overlay po-desarrollo"></div>
+      <div class="parallax-overlay po-consecuencias"></div>
+    </div>
+    <header class="hero" id="inicio">
+      <nav class="topbar" aria-label="Navegación principal">
+        <a href="#inicio" class="brand">Tamazunchale 1879-1882</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú">☰</button>
+        <div class="nav-links">
+          <a href="#introduccion">Introducción</a>
+          <a href="#antecedentes">Antecedentes</a>
+          <a href="#desarrollo">Desarrollo</a>
+          <a href="#personajes">Personajes</a>
+          <a href="#timeline">Línea del tiempo</a>
+          <a href="#galeria">Galería</a>
+          <a href="#qr">QR</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="kicker">Experiencia de museo digital educativo</p>
+          <h1>La Rebelión  de Tamazunchale</h1>
+          <p>
+            Un recorrido interactivo por la sublevación indígena de la Huasteca Potosina,
+            su raíz agraria, sus conflictos políticos y el impacto que dejó en la memoria
+            regional de San Luis Potosí.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#introduccion">Iniciar recorrido</a>
+            <a class="button ghost" href="#timeline">Ver cronología</a>
+          </div>
+        </div>
+
+        <aside class="artifact-panel reveal" aria-label="Ficha curatorial">
+          <span class="seal">Archivo regional</span>
+          <h2>Ficha histórica</h2>
+          <dl>
+            <div><dt>Periodo central</dt><dd>1879-1882</dd></div>
+            <div><dt>Región</dt><dd>Partido de Tamazunchale, Huasteca Potosina</dd></div>
+            <div><dt>Liderazgo</dt><dd>Juan Santiago, gobernador indígena</dd></div>
+            <div><dt>Eje del conflicto</dt><dd>Tierra comunal, gobierno municipal y poder local</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="museum-section intro-section" id="introduccion" data-audio-section="introduccion">
+        <div class="section-heading reveal">
+          <p class="kicker">Sala 1</p>
+          <h2>Introducción general</h2>
+        </div>
+        <div class="content-grid">
+          <article class="text-panel reveal">
+            <h3>Qué fue</h3>
+            <p>
+              La Rebelión de Tamazunchale fue una sublevación indígena y campesina que se
+              desarrolló en la Huasteca Potosina entre 1879 y 1882, con epicentro en el
+              partido de Tamazunchale. El movimiento fue encabezado por Juan Santiago,
+              gobernador indígena de Tamazunchale, y se articuló alrededor de una demanda
+              decisiva: recuperar tierras que las comunidades consideraban usurpadas por
+              haciendas, condueñazgos, autoridades locales y redes de poder regional.
+            </p>
+            <p>
+              Aunque en muchos relatos aparece como una rebelión agraria, su fondo fue más
+              amplio. Enfrentó dos maneras de entender la vida pública: el gobierno liberal
+              municipal, centralizado por jefes políticos y autoridades estatales, y el
+              sistema comunitario indígena, que conservaba autoridades propias, normas
+              internas, trabajo colectivo, títulos antiguos y memoria territorial.
+            </p>
+          </article>
+          <article class="text-panel reveal">
+            <h3>Contexto y origen</h3>
+            <p>
+              Ocurrió al inicio del Porfiriato, cuando el régimen de Porfirio Díaz buscaba
+              pacificar el país, ordenar la administración local y favorecer la expansión de
+              la propiedad privada, la producción comercial y el control político. En la
+              Huasteca, esas políticas se encontraron con comunidades nahuas y tének que
+              defendían tierras comunales y formas propias de gobierno.
+            </p>
+            <p>
+              El conflicto comenzó porque los pueblos habían intentado recuperar sus títulos
+              de propiedad por vías legales y no obtuvieron una solución. A ello se sumaron
+              cargas municipales, trabajos sin pago, exclusión electoral, abusos de
+              hacendados, presión para dividir tierras comunales y el peso de familias
+              notables que concentraban tierra, cargos, dinero y fuerza armada.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="museum-section" id="antecedentes" data-audio-section="antecedentes">
+        <div class="section-heading reveal">
+          <p class="kicker">Sala 2</p>
+          <h2>Antecedentes históricos</h2>
+        </div>
+        <div id="antecedentes-grid" class="cards-grid"></div>
+      </section>
+
+      <section class="museum-section dark-band" id="mapa" data-audio-section="mapa">
+        <div class="section-heading reveal">
+          <p class="kicker">Sala cartográfica</p>
+          <h2>Mapa interpretativo de la rebelión</h2>
+        </div>
+        <div class="map-layout">
+          <div class="map-board reveal" aria-label="Mapa esquemático de la Huasteca Potosina">
+            <svg viewBox="0 0 900 560" role="img" aria-labelledby="map-title map-desc">
+              <title id="map-title">Mapa esquemático del movimiento de Tamazunchale</title>
+              <desc id="map-desc">Representación visual de Tamazunchale, Tancanhuitz, Axtla, Tampacán, San Martín Chalchicuautla, Hidalgo y rutas de movilización.</desc>
+              <defs>
+                <filter id="paperNoise">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3"></feTurbulence>
+                  <feColorMatrix type="saturate" values="0.15"></feColorMatrix>
+                  <feBlend mode="multiply" in2="SourceGraphic"></feBlend>
+                </filter>
+              </defs>
+              <rect width="900" height="560" rx="18" class="map-paper"></rect>
+              <path class="river" d="M75 430 C190 360 250 438 350 360 S540 330 620 240 S735 142 840 170"></path>
+              <path class="sierra" d="M100 180 C190 90 300 120 380 165 C470 215 555 120 680 135 C765 145 820 210 850 260"></path>
+              <path class="route route-main" d="M355 305 C410 260 470 270 520 225 C575 175 650 165 720 140"></path>
+              <path class="route route-alt" d="M355 305 C305 250 260 235 205 220 C160 205 130 180 105 150"></path>
+              <path class="route route-alt" d="M355 305 C390 355 450 385 520 405 C590 426 650 450 720 430"></path>
+              <g class="place hot" data-place="Tamazunchale">
+                <circle cx="355" cy="305" r="16"></circle><text x="382" y="313">Tamazunchale</text>
+              </g>
+              <g class="place" data-place="Tamán">
+                <circle cx="298" cy="345" r="10"></circle><text x="315" y="350">Tamán</text>
+              </g>
+              <g class="place" data-place="Axtla">
+                <circle cx="255" cy="268" r="10"></circle><text x="272" y="272">Axtla</text>
+              </g>
+              <g class="place" data-place="Tampacán">
+                <circle cx="422" cy="366" r="10"></circle><text x="439" y="371">Tampacán</text>
+              </g>
+              <g class="place" data-place="San Martín Chalchicuautla">
+                <circle cx="204" cy="220" r="10"></circle><text x="218" y="208">San Martín</text>
+              </g>
+              <g class="place" data-place="Tancanhuitz">
+                <circle cx="612" cy="408" r="11"></circle><text x="630" y="414">Tancanhuitz</text>
+              </g>
+              <g class="place" data-place="Jacala y Molango">
+                <circle cx="720" cy="140" r="11"></circle><text x="738" y="145">Jacala / Molango</text>
+              </g>
+              <g class="place" data-place="Ciudad del Maíz">
+                <circle cx="730" cy="430" r="11"></circle><text x="748" y="436">Ciudad del Maíz</text>
+              </g>
+            </svg>
+          </div>
+          <div class="map-notes reveal">
+            <h3>Lectura del mapa</h3>
+            <p>
+              El mapa no pretende sustituir una carta geográfica exacta: funciona como una
+              representación didáctica de los corredores del conflicto. Tamazunchale fue el
+              centro político y simbólico; Tamán aparece como centro de operaciones; Axtla,
+              Tampacán y San Martín formaban parte del partido; Tancanhuitz y Ciudad del
+              Maíz fueron claves para las fuerzas de contención; Jacala y Molango muestran
+              la conexión hidalguense del movimiento.
+            </p>
+            <div id="map-detail" class="map-detail">Toca un punto del mapa para ver su papel histórico.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="museum-section" id="desarrollo" data-audio-section="desarrollo">
+        <div class="section-heading reveal">
+          <p class="kicker">Sala 3</p>
+          <h2>Desarrollo de la rebelión</h2>
+        </div>
+        <div id="desarrollo-list" class="phase-list"></div>
+      </section>
+
+      <section class="museum-section" id="personajes" data-audio-section="personajes">
+        <div class="section-heading reveal">
+          <p class="kicker">Sala 4</p>
+          <h2>Personajes y grupos importantes</h2>
+        </div>
+        <div id="personajes-grid" class="people-grid"></div>
+      </section>
+
+      <section class="museum-section dark-band" id="timeline" data-audio-section="timeline">
+        <div class="section-heading reveal">
+          <p class="kicker">Mesa interactiva</p>
+          <h2>Línea del tiempo</h2>
+        </div>
+        <div class="timeline-shell reveal">
+          <div id="timeline-track" class="timeline-track" role="list"></div>
+          <article id="timeline-detail" class="timeline-detail" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="museum-section" id="consecuencias" data-audio-section="consecuencias">
+        <div class="section-heading reveal">
+          <p class="kicker">Sala 5</p>
+          <h2>Consecuencias</h2>
+        </div>
+        <div id="consecuencias-grid" class="cards-grid"></div>
+      </section>
+
+      <section class="museum-section" id="impacto" data-audio-section="impacto">
+        <div class="section-heading reveal">
+          <p class="kicker">Sala 6</p>
+          <h2>Impacto actual y memoria histórica</h2>
+        </div>
+        <div class="wide-panel reveal">
+          <p>
+            La Rebelión de Tamazunchale importa hoy porque muestra que los conflictos por
+            tierra, representación política, autonomía comunitaria, racismo estructural y
+            desigualdad regional no son asuntos aislados del pasado. En la Huasteca, la
+            memoria de las comunidades indígenas se enlaza con debates contemporáneos sobre
+            territorio, identidad nahua y tének, defensa del agua, reconocimiento de sistemas
+            normativos, consulta comunitaria y desigualdad en regiones rurales.
+          </p>
+          <p>
+            Su estudio permite comprender que el Porfiriato no fue solo ferrocarriles,
+            orden administrativo y crecimiento económico. También fue una etapa de
+            concentración de la tierra, criminalización de protestas rurales, imposición de
+            jefaturas políticas y debilitamiento de autoridades comunitarias. Para México
+            actual, el episodio funciona como una advertencia: cuando la modernización se
+            impone sin justicia territorial ni voz local, produce resistencia.
+          </p>
+        </div>
+      </section>
+
+      <section class="museum-section dark-band" id="galeria" data-audio-section="galeria">
+        <div class="section-heading reveal">
+          <p class="kicker">Galería</p>
+          <h2>Galería Histórica de la Rebelión de Tamazunchale</h2>
+        </div>
+        <div class="wide-panel reveal">
+          <p>Material visual histórico para comprender la región, los personajes, los documentos y los lugares que rodearon la Rebelión de Tamazunchale (1879-1882). Haga clic en cualquier imagen para verla ampliada con su descripción histórica completa.</p>
+        </div>
+        <div id="galeria-grid" class="galeria-grid" style="width:min(1180px,100%);margin-inline:auto"></div>
+      </section>
+
+      <section class="museum-section" id="archivo" data-audio-section="archivo">
+        <div class="section-heading reveal">
+          <p class="kicker">Sala de consulta</p>
+          <h2>Archivo Histórico de la Rebelión de Tamazunchale</h2>
+        </div>
+        <div class="wide-panel reveal">
+          <p>Documentos históricos verificables sobre la Rebelión de Tamazunchale (1879-1882). Cada documento incluye su fuente original y enlace de consulta cuando está disponible en repositorios digitales.</p>
+        </div>
+        <div id="archivo-grid" class="archivo-grid" style="width:min(1180px,100%);margin-inline:auto;margin-top:1.5rem"></div>
+      </section>
+
+      <section class="museum-section dark-band" id="audio" data-audio-section="audio">
+        <div class="section-heading reveal">
+          <p class="kicker">Audioguía</p>
+          <h2>Narraciones históricas</h2>
+        </div>
+        <div id="audio-grid" class="audio-grid"></div>
+      </section>
+
+      <section class="museum-section" id="qr" data-audio-section="qr">
+        <div class="section-heading reveal">
+          <p class="kicker">Códigos para exposición</p>
+          <h2>Sistema de QR interactivo</h2>
+        </div>
+        <div class="wide-panel reveal">
+          <p>
+            Cada código QR dirige a una sección o ficha específica de esta misma página.
+            En una presentación escolar pueden imprimirse y colocarse junto a carteles,
+            maquetas o estaciones de audio para que el público consulte el contenido desde
+            su celular.
+          </p>
+        </div>
+        <div id="qr-grid" class="qr-grid"></div>
+      </section>
+
+      <section class="museum-section" id="indice" data-audio-section="indice">
+        <div class="section-heading reveal">
+          <p class="kicker">Cierre documental</p>
+          <h2>Índice Completo del Proyecto</h2>
+        </div>
+        <div id="project-index" class="index-panel reveal"></div>
+      </section>
+
+      <section class="museum-section sources" id="fuentes" data-audio-section="fuentes">
+        <div class="section-heading reveal">
+          <p class="kicker">Consulta</p>
+          <h2>Fuentes utilizadas</h2>
+        </div>
+        <div class="wide-panel reveal">
+          <ul>
+            <li>Carmen Salinas, “Rebelión indígena en la Huasteca Potosina, 1879-1882”.</li>
+            <li>Biblioteca Digital ILCE, “Porfiriato: Carlos Díez Gutiérrez, el espejo de Porfirio Díaz”.</li>
+            <li>Antonio Escobar Ohmstede, estudio sobre violencias colectivas en las Huastecas en la década de 1840.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <div class="progress-track" aria-hidden="true"></div>
+
+    <nav class="section-nav" aria-label="Navegación de secciones"></nav>
+
+    <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="lightbox-panel">
+        <button class="lightbox-close" type="button" aria-label="Cerrar vista ampliada">&times;</button>
+        <div class="lightbox-image"></div>
+        <div class="lightbox-meta"></div>
+      </div>
+    </div>
+
+    <div class="ambient-panel">
+      <label class="volume-label">
+        <span>Vol.</span>
+        <input type="range" id="ambient-volume" min="0" max="1" step="0.05" value="0.7" aria-label="Volumen del sonido ambiente">
+      </label>
+    </div>
+
+    <button id="ambient-toggle" class="ambient-toggle" type="button" aria-label="Activar sonido ambiental">
+      <span class="ambient-icon" aria-hidden="true"></span>
+      <span class="ambient-text">Ambiente</span>
+    </button>
+
+    <script src="qrcode.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

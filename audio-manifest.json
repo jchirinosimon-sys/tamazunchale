@@ -1,0 +1,19 @@
+{
+  "version": "4.0.0",
+  "project": "La Rebelión de Tamazunchale (1879-1889)",
+  "description": "Audios grabados para el recorrido autoguiado del museo digital.",
+  "sections": [
+    { "id": "presentacion", "title": "Presentación del proyecto", "file": "primero.mp3", "sectionId": "inicio" },
+    { "id": "datosFundamentales", "title": "Datos fundamentales", "file": "segundo.mp3", "sectionId": "inicio" },
+    { "id": "introduccionGeneral", "title": "Introducción general", "file": "tercero.mp3", "sectionId": "introduccion" },
+    { "id": "antecedentes", "title": "Antecedentes históricos", "file": "cuarto.mp3", "sectionId": "antecedentes" },
+    { "id": "presentacionMapa", "title": "Presentación del mapa interactivo", "file": "quinto.mp3", "sectionId": "mapa" },
+    { "id": "explicacionLugares", "title": "Explicación de los lugares del mapa", "file": "sexto.mp3", "sectionId": "mapa" },
+    { "id": "desarrollo", "title": "Desarrollo de la rebelión", "file": "septimo.mp3", "sectionId": "desarrollo" },
+    { "id": "personajes", "title": "Personajes y grupos importantes", "file": "octavo.mp3", "sectionId": "personajes" },
+    { "id": "timeline", "title": "Línea del tiempo", "file": "noveno.mp3", "sectionId": "timeline" },
+    { "id": "consecuencias", "title": "Consecuencias", "file": "decimo.mp3", "sectionId": "consecuencias" },
+    { "id": "impacto", "title": "Impacto actual y memoria histórica", "file": "onceavo.mp3", "sectionId": "impacto" },
+    { "id": "despedida", "title": "Cierre del recorrido", "file": "despedida.mp3", "sectionId": "fuentes" }
+  ]
+}
