@@ -2532,7 +2532,6 @@ body:has(#welcome-screen:not(.hidden)) {
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.5);
   font-family: system-ui, sans-serif;
-  cursor: grab;
   user-select: none;
   animation: miniPlayerIn 0.3s ease-out;
 }
@@ -2549,6 +2548,9 @@ body:has(#welcome-screen:not(.hidden)) {
 }
 .mini-player-inner {
   padding: 0.7rem 0.8rem;
+}
+.mini-player-drag-handle {
+  cursor: grab;
 }
 .mini-player-header {
   display: flex;

@@ -1649,7 +1649,7 @@ function createMiniPlayer() {
   miniPlayer.className = "mini-player";
   miniPlayer.innerHTML =
     '<div class="mini-player-inner">' +
-      '<div class="mini-player-header">' +
+      '<div class="mini-player-header mini-player-drag-handle">' +
         '<span class="mini-player-section"></span>' +
         '<button class="mini-btn mini-close-btn" title="Cerrar">✕</button>' +
       '</div>' +
@@ -1721,18 +1721,13 @@ function createMiniPlayer() {
     }
   });
 
-  miniPlayer.querySelectorAll(".mini-btn, .mini-player-bar, .mini-player-volume").forEach(function(el) {
-    el.addEventListener("touchstart", function(e) {
-      e.stopPropagation();
-    }, { passive: true });
-  });
-
-  makeDraggable(miniPlayer);
+  makeDraggable(miniPlayer, miniPlayer.querySelector(".mini-player-drag-handle"));
 }
 
-function makeDraggable(el) {
+function makeDraggable(el, handle) {
   var isDragging = false;
   var startX, startY, origX, origY;
+  var target = handle || el;
 
   function onStart(e) {
     if (e.target.closest("button, input, [data-action]")) return;
@@ -1767,10 +1762,10 @@ function makeDraggable(el) {
     el.classList.remove("dragging");
   }
 
-  el.addEventListener("mousedown", onStart);
+  target.addEventListener("mousedown", onStart);
   document.addEventListener("mousemove", onMove);
   document.addEventListener("mouseup", onEnd);
-  el.addEventListener("touchstart", onStart, { passive: false });
+  target.addEventListener("touchstart", onStart, { passive: false });
   document.addEventListener("touchmove", onMove, { passive: false });
   document.addEventListener("touchend", onEnd);
 }
