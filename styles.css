@@ -2640,6 +2640,8 @@ body:has(#welcome-screen:not(.hidden)) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
 }
 .mini-btn:hover {
   background: rgba(232,184,111,0.12);

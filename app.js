@@ -1721,6 +1721,12 @@ function createMiniPlayer() {
     }
   });
 
+  miniPlayer.querySelectorAll(".mini-btn, .mini-player-bar, .mini-player-volume").forEach(function(el) {
+    el.addEventListener("touchstart", function(e) {
+      e.stopPropagation();
+    }, { passive: true });
+  });
+
   makeDraggable(miniPlayer);
 }
 
